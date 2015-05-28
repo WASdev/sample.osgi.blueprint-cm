@@ -1,2 +1,7 @@
 # sample.osgi.blueprint-cm
-Demonstrating blueprint-cm enablement in Liberty
+Demonstrating:
+
+- Apache Aries blueprint-cm works in OSGi apps in Liberty due to custom namespace handlers now working. 
+- General custom namespace handler support
+
+
