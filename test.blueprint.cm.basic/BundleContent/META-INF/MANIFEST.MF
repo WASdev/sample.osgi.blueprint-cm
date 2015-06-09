@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: test.blueprint.cm.basic
+Bundle-SymbolicName: test.blueprint.cm.basic
+Bundle-Version: 1.0.0
+Bundle-Blueprint: OSGI-INF/blueprint/*.xml
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+
