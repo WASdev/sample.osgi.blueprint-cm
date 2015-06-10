@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: test.wab.frontEnd
+Bundle-SymbolicName: test.wab.frontEnd
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: WEB-INF/classes
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Blueprint: OSGI-INF/blueprint/*.xml
+Web-ContextPath: /test.wab.frontEnd
+Import-Package: javax.el;version="2.0",
+ javax.servlet;version="2.5",
+ javax.servlet.annotation,
+ javax.servlet.http;version="2.5",
+ javax.servlet.jsp;version="2.0",
+ javax.servlet.jsp.el;version="2.0",
+ javax.servlet.jsp.tagext;version="2.0", 
+ bp.cm.test;version="[1.0.0,2.0.0)", 
+ javax.naming, 
+ org.osgi.service.cm
+
