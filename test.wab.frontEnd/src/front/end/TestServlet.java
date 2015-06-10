@@ -19,7 +19,8 @@ import org.osgi.service.cm.ConfigurationAdmin;
 import custom.ns.test.SomeService;
 
 /**
- * A simple servlet to take params from an HTML Form and load them into Config Admin
+ * A simple servlet to take params from an HTML Form and load them into Config Admin. 
+ * Also we exercise a custom blueprint namespace handler. 
  */
 @WebServlet("/TestServlet")
 public class TestServlet extends HttpServlet {
@@ -39,7 +40,7 @@ public class TestServlet extends HttpServlet {
 			config.update(dict);
 			response.getWriter().println ("<html><head/><body>Config updated. Click <a href=\"/test.wab.frontEnd/index.html\">here</a> to input new configuration.</body></html>");
 			
-			// Finally do something to exercise the custom namespace handler
+			// Exercise the custom blueprint namespace handler
 			SomeService s = (SomeService) new InitialContext().lookup("blueprint:comp/someServiceRef");
 			s.doSomething();
 

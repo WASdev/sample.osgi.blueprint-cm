@@ -16,10 +16,18 @@ import java.lang.reflect.Method;
 import org.osgi.service.blueprint.reflect.ComponentMetadata;
 
 /**
- * This test interceptor prints a comment, obtained from testHandler.xsd, before method invocations on annotated blueprint beans
+ * This test interceptor prints a comment, obtained from testHandler.xsd, 
+ * before method invocations on annotated blueprint beans
  */
 public class TestInterceptor implements org.apache.aries.blueprint.Interceptor
 {
+	private final String _comment;
+
+    public TestInterceptor(String comment)
+    {
+        _comment = comment;
+    }
+
     @Override
     public int getRank()
     {
@@ -32,20 +40,14 @@ public class TestInterceptor implements org.apache.aries.blueprint.Interceptor
 
     @Override
     public void postCallWithReturn(ComponentMetadata arg0, Method arg1, Object arg2, Object arg3) throws Throwable
-    {}
+    {
+        System.out.println("TestInterceptor.postCall: ok");
+    }
 
     @Override
     public Object preCall(ComponentMetadata arg0, Method arg1, Object... arg2) throws Throwable
     {
-        System.out.println(_comment);
+        System.out.println("TestInterceptor.preCall: " + _comment);
         return null;
     }
-
-    private final String _comment;
-
-    public TestInterceptor(String comment)
-    {
-        _comment = comment;
-    }
-
 }

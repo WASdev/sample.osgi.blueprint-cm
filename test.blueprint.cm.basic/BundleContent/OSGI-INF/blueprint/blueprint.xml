@@ -17,7 +17,7 @@
   </bean>
   
   <service interface="custom.ns.test.SomeService"> 
-  	<bean class="custom.ns.test.CommentedBean">
+  	<bean class="custom.ns.test.impl.CommentedBean">
 	    <yy:comment text="--Comment from custom bp namespace"/>
   	</bean>
   </service>
