@@ -12,9 +12,10 @@ slf4j.jdk14
 
 Liberty server.xml:
 
+~~~~
 <featureManager>
   <feature>wab-1.0</feature>
   <feature>jndi-1.0</feature>
 </featureManager>
-
+~~~~
 
