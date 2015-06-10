@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
-           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.2.0">
+           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.2.0"
+           xmlns:yy="http://www.ibm.com/xmlns/apptest/v1.0.0">
 
   <bean class="bp.cm.test.ContainerManaged">
     <cm:managed-properties 
@@ -14,5 +15,11 @@
       update-strategy="component-managed"
       update-method="update"/>
   </bean>
+  
+  <service interface="custom.ns.test.SomeService"> 
+  	<bean class="custom.ns.test.CommentedBean">
+	    <yy:comment text="--Comment from custom bp namespace"/>
+  	</bean>
+  </service>
     
 </blueprint>

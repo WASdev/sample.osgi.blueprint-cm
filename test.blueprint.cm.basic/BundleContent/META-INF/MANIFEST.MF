@@ -5,7 +5,7 @@ Bundle-SymbolicName: test.blueprint.cm.basic
 Bundle-Version: 1.0.0
 Bundle-Blueprint: OSGI-INF/blueprint/*.xml
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: bp.cm.test;version="1.0.0"
-
+Export-Package: bp.cm.test;version="1.0.0", 
+ custom.ns.test; version="1.0.0"
 
 

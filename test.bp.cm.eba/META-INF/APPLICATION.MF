@@ -3,10 +3,11 @@ Application-SymbolicName: test.bp.cm.eba
 Application-ManifestVersion: 1.0
 Application-Version: 1.0.0.qualifier
 Application-Content: org.apache.aries.blueprint.cm;version="1.0.6",
-  org.apache.felix.configadmin;version="1.8.4",
-  slf4j.api;version="1.7.12",
-  test.blueprint.cm.basic;version="1.0.0",
-  test.wab.frontEnd;version="1.0.0", 
-  slf4j.jdk14
+ org.apache.felix.configadmin;version="1.8.4",
+ slf4j.api;version="1.7.12",
+ test.blueprint.cm.basic;version="1.0.0",
+ test.wab.frontEnd;version="1.0.0",
+ slf4j.jdk14,
+ test.custom.ns.handler;version="1.0.0"
 Manifest-Version: 1.0
 

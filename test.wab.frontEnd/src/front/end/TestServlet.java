@@ -1,5 +1,7 @@
 package front.end;
 
+import static bp.cm.test.Constants.PID;
+
 import java.io.IOException;
 import java.util.Dictionary;
 import java.util.Hashtable;
@@ -14,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.osgi.service.cm.Configuration;
 import org.osgi.service.cm.ConfigurationAdmin;
 
-import static bp.cm.test.Constants.PID;
+import custom.ns.test.SomeService;
 
 /**
  * A simple servlet to take params from an HTML Form and load them into Config Admin
@@ -36,6 +38,11 @@ public class TestServlet extends HttpServlet {
 			dict.put("height", height);
 			config.update(dict);
 			response.getWriter().println ("<html><head/><body>Config updated. Click <a href=\"/test.wab.frontEnd/index.html\">here</a> to input new configuration.</body></html>");
+			
+			// Finally do something to exercise the custom namespace handler
+			SomeService s = (SomeService) new InitialContext().lookup("blueprint:comp/someServiceRef");
+			s.doSomething();
+
 		} catch (Exception e) { 
 			e.printStackTrace(response.getWriter());
 		}

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: test.custom.ns.handler
+Bundle-SymbolicName: test.custom.ns.handler
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Activator: test.app.namespace.Activator
+Import-Package: org.osgi.framework,
+ org.osgi.service.blueprint.reflect,
+ org.apache.aries.blueprint,
+ org.w3c.dom
+
+
