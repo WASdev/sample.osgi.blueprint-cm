@@ -2,8 +2,6 @@
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
            xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.2.0">
 
-  <reference id="configAdminRef" interface="org.osgi.service.cm.ConfigurationAdmin"/>
-  
   <bean class="bp.cm.test.ContainerManaged">
   	<cm:managed-properties 
   	  persistent-id="bp.test.pid" 

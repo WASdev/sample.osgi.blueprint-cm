@@ -1,7 +1,5 @@
 package bp.cm.test;
 
-import java.util.Map;
-
 public class ContainerManaged {
 
 	public void setLength (String length) { 
