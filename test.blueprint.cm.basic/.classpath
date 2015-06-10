@@ -13,5 +13,6 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="com.ibm.osgi.container"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/org.apache.felix.configadmin"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
