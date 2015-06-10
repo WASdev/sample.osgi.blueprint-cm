@@ -36,7 +36,6 @@ public class TestServlet extends HttpServlet {
 			dict.put("height", height);
 			config.update(dict);
 			response.getWriter().println ("<html><head/><body>Config updated. Click <a href=\"/test.wab.frontEnd/index.html\">here</a> to input new configuration.</body></html>");
-			
 		} catch (Exception e) { 
 			e.printStackTrace(response.getWriter());
 		}

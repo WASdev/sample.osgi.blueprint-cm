@@ -3,13 +3,13 @@
            xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.2.0">
 
   <bean class="bp.cm.test.ContainerManaged">
-  	<cm:managed-properties 
-  	  persistent-id="bp.test.pid" 
-  	  update-strategy="container-managed"/>
+    <cm:managed-properties 
+      persistent-id="bp.test.pid" 
+      update-strategy="container-managed"/>
   </bean>
   
   <bean class="bp.cm.test.ComponentManaged">
-  	<cm:managed-properties 
+    <cm:managed-properties 
       persistent-id="bp.test.pid"
       update-strategy="component-managed"
       update-method="update"/>
