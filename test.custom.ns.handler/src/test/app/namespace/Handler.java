@@ -47,7 +47,7 @@ public class Handler implements NamespaceHandler
     }
 
     @SuppressWarnings("rawtypes")
-	@Override
+    @Override
     public Set<Class> getManagedClasses() {
         return null;
     }
