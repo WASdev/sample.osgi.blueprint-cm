@@ -21,10 +21,10 @@ The sample comprises a single OSGi application, checked into Git as a set of Ecl
 4. Create a new server: New > Server > WebSphere Application Server V8.5 Liberty Profile
 
 5. Download the four bundles listed below. The simplest place to get them is [Maven Central](http://search.maven.org/). It's probably ok to use later versions, but the links are to the level of each bundle that I've used in developing and testing the sample.  
-- [org.apache.felix.configadmin 1.8.4](http://search.maven.org/remotecontent?filepath=org/apache/felix/org.apache.felix.configadmin/1.8.4/org.apache.felix.configadmin-1.8.4.jar)
-- [slf4j.api 1.7.12](http://search.maven.org/remotecontent?filepath=org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar)
-- [slf4j.jdk14 1.7.12](http://search.maven.org/remotecontent?filepath=org/slf4j/slf4j-jdk14/1.7.12/slf4j-jdk14-1.7.12.jar)
-- [org.apache.aries.blueprint.cm 1.0.6](http://search.maven.org/remotecontent?filepath=org/apache/aries/blueprint/org.apache.aries.blueprint.cm/1.0.6/org.apache.aries.blueprint.cm-1.0.6.jar)
+  - [org.apache.felix.configadmin 1.8.4](http://search.maven.org/remotecontent?filepath=org/apache/felix/org.apache.felix.configadmin/1.8.4/org.apache.felix.configadmin-1.8.4.jar)
+  - [slf4j.api 1.7.12](http://search.maven.org/remotecontent?filepath=org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar)
+  - [slf4j.jdk14 1.7.12](http://search.maven.org/remotecontent?filepath=org/slf4j/slf4j-jdk14/1.7.12/slf4j-jdk14-1.7.12.jar)
+  - [org.apache.aries.blueprint.cm 1.0.6](http://search.maven.org/remotecontent?filepath=org/apache/aries/blueprint/org.apache.aries.blueprint.cm/1.0.6/org.apache.aries.blueprint.cm-1.0.6.jar)
 
 Liberty server.xml:
 
