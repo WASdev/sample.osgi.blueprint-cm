@@ -26,12 +26,20 @@ The sample comprises a single OSGi application, checked into Git as a set of Ecl
   - [slf4j.jdk14 1.7.12](http://search.maven.org/remotecontent?filepath=org/slf4j/slf4j-jdk14/1.7.12/slf4j-jdk14-1.7.12.jar)
   - [org.apache.aries.blueprint.cm 1.0.6](http://search.maven.org/remotecontent?filepath=org/apache/aries/blueprint/org.apache.aries.blueprint.cm/1.0.6/org.apache.aries.blueprint.cm-1.0.6.jar)
 
-Liberty server.xml:
+6. Load them into Eclipse: File > Import > OSGi Bundle or Fragment. Select the WebSphere Application Server Liberty Profile with SPI target runtime. 
 
-~~~~
-<featureManager>
-  <feature>wab-1.0</feature>
-  <feature>jndi-1.0</feature>
-</featureManager>
-~~~~
+7. git clone https://github.com/WASdev/sample.osgi.blueprint-cm. File > Import > Existing projects into workspace. Pull in:
+  - test.blueprint.cm.basic - Blueprint-managed beans
+  - test.bp.cm.eba - OSGi application
+  - test.custom.ns.handler - custom Blueprint namespace handler provider
+  - test.wab.frontEnd - a simple web interface to drive the test 
 
+8. Create a new Server. In the 'Servers' view, right click > New > Server > WebSphere Application Server Liberty Profile. 
+
+9. Double click the 'Server Configuration' and add these features: 
+  - wab-1.0
+  - jndi-1.0
+  
+10. Run the test! In the enterprise explorer view, test.wab.frontEnd > WebContent > index.html. Right click > Run As > Run on Server. Select the Liberty server and add the test.bp.cm.eba to the server. This should launch a web browser with a simple form in. Fill in some values (anything will do) and click 'Send'. Check the 'Console' view to see various results in the messages.log. 
+
+Again, please see the associated article for more information on what this sample is showing. 
